@@ -76,6 +76,17 @@ function mainMenu() {
                 db.query('INSERT INTO employee (first_name) VALUE ', function (err, results) {
                     console.log(results);})
                 break;
+            case 'update an employee role':
+                inquirer
+                    .prompt(
+                        {
+                        type:'input',
+                        message: "What employee would you like to update?",
+                        name: 'role update'
+                        })
+                db.query('INSERT INTO employee (first_name) VALUE ', function (err, results) {
+                    console.log(results);})
+                break;
 
         }
     });
